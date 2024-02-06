@@ -1,0 +1,1 @@
+print(*sorted(list(map(int, list(input()))), reverse=True), sep="")
