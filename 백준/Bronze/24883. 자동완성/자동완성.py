@@ -1,6 +1,1 @@
-n = input()
-
-if n == "n" or n == "N":
-    print("Naver D2")
-else:
-    print("Naver Whale")
+print("Naver D2" if input().lower() == "n" else "Naver Whale")
