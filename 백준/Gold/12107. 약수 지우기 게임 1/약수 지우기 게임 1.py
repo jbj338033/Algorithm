@@ -1,2 +1,1 @@
-n=int(input())
-print('A' if n!=1 else 'B')
+print('A' if int(input())!=1 else 'B')
