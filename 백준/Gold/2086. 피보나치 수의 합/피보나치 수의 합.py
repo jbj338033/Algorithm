@@ -1,5 +1,5 @@
 import sys
-d={1:1,2:1,3:2,4:3,5:5}
+d={1:1,2:1}
 def f(n):
   if d.get(n):
     return d[n]
