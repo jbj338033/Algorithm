@@ -1,3 +1,4 @@
 for _ in range(int(input())):
-    for i in input().split():
-        print(i[::-1], end=" ")
+    l=input().split()
+    for i in l:print(i[::-1],end=' ')
+    print()
