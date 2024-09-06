@@ -1,19 +1,17 @@
-from collections import deque
 import sys
-
-s=input()
-l=deque(s)
-r=deque()
-
+from collections import deque
+input=sys.stdin.readline
+s=input().rstrip()
+l,r=deque(s),deque()
 for _ in range(int(input())):
-    a=sys.stdin.readline().split()
+    a=input().split()
     c=a[0]
-
-    if c == 'L' and l:r.appendleft(l.pop())
-    elif c == 'D' and r:l.append(r.popleft())
-    elif c == 'B' and l:l.pop()
-    elif c == 'P':
-        v=a[1]
-        l.append(v)
-print(*l,*r,sep='')
-
+    if c=='L':
+        if l:r.appendleft(l.pop())
+    elif c=='D':
+        if r:l.append(r.popleft())
+    elif c=='B':
+        if l:l.pop()
+    else:
+        l.append(a[1])
+print(*(l+r),sep='')
